@@ -1,0 +1,1 @@
+neovim config from source: [nvchad](https://nvchad.com/)
