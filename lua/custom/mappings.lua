@@ -1,10 +1,16 @@
 local M = {}
 
 M.dap = {
+  -- might ned to be removed it doesn't work with rust (added for c/cpp)
+  plugin = true,
   n = {
 	["<leader>db"] = {
 		"<cmd> DapToggleBreakpoint <CR>" ,
 		"Toggle breakpoint"
+	},
+	["<leader>dr"] = {
+	    "<cmd> DapContinue <CR>",
+	    "start of continue the debugging"
 	},
 	["<leader>dus"] = {
 		function ()
