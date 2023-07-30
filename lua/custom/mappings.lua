@@ -22,6 +22,16 @@ M.dap = {
 	},
   }
 }
+
+M.crates = {
+	n = {
+		["<C-h>"] =  {"<cmd> TmuxNavigateLeft <CR>", "window left"},
+		["<C-l>"] =  {"<cmd> TmuxNavigateRight <CR>", "window right"},
+		["<C-j>"] =  {"<cmd> TmuxNavigateLeftDown <CR>", "window down"},
+		["<C-k>"] =  {"<cmd> TmuxNavigateLeftUp <CR>", "window up"},
+	}
+}
+
 M.crates = {
 	plugin = true,
 	n = {

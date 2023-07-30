@@ -14,6 +14,19 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
 }
 
+lspconfig.tsserver.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    root_dir = util.root_pattern("package.json"),
+    filestypes = {"typescript ,svelte"},
+})
+
+lspconfig.svelteserver.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    --root_dir = util.root_pattern("package.json"),
+    filestypes = {"svelte"},
+})
 
 --[[
     lspconfig.rust_analyzer.setup({

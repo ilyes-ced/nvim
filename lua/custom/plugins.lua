@@ -97,6 +97,14 @@ local plugins = {
           dapui.close()
         end
       end
-    }
+    },
+    {
+      "jose-elias-alvarez/typescript.nvim",
+      dependencies = "williamboman/mason.nvim",
+    },
+    {
+      "christoomey/vim-tmux-navigator",
+      lazy = false
+    },
 }
 return plugins
