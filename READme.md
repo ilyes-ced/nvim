@@ -1,3 +1,6 @@
+# important documentation
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
 neovim config from source: [nvchad](https://nvchad.com/)
 
 ```bash
@@ -17,3 +20,8 @@ open debugger in rust with :RustDebuggable
 lua local widgets = require("dap.ui.widgets"); local sidebar = widgets.sidebar(widgets.scopes); sidebar.open()
 ```
 go line by line :DapStepOver
+
+
+
+
+
