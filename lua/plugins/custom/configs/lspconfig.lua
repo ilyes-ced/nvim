@@ -6,6 +6,33 @@ local util = require "lspconfig/util"
 
 
 
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {"gopls"},
+  filetypes = {"go", "gomod", "gowork", "gotmpl"},
+  root_dir = util.root_pattren("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
+}
+
+
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    -- your personal jdtls preferences
+  },
+}
+
+
 lspconfig.clangd.setup {
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
